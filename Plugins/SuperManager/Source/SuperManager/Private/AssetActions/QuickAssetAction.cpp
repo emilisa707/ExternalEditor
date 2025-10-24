@@ -86,7 +86,7 @@ void UQuickAssetAction::RemoveUnusedAssets()
 	for (const FAssetData& SelectedAssetData : SelectedAssetsData)
 	{
 		const FString AssetPath = SelectedAssetData.GetObjectPathString();
-		TArray<FString> AssetReferences;
+		TArray<FString> AssetReferences=
 		UEditorAssetLibrary::FindPackageReferencersForAsset(AssetPath);
 
 		if (AssetReferences.Num() == 0)
